@@ -1,0 +1,121 @@
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100dvh;
+  background-color: black;
+  color: white;
+}
+
+/* Styles remain exactly the same */
+:root {
+  color-scheme: dark;
+}
+
+.blob-container {
+  position: relative;
+  width: 450px;
+  height: 450px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-layer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.blob-clip {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  clip-path: circle(50% at center);
+  animation: none;
+  transition:
+    width 0.5s ease,
+    height 0.5s ease,
+    transform 0.5s ease;
+  transform: translateY(0);
+}
+
+@keyframes dormant {
+  0%,
+  100% {
+    clip-path: circle(45% at center);
+  }
+  50% {
+    clip-path: circle(48% at center);
+  }
+}
+
+@keyframes listening-shape {
+  0%,
+  100% {
+    clip-path: circle(48% at center);
+  }
+  50% {
+    clip-path: circle(50% at center);
+  }
+}
+
+@keyframes speaking-shape {
+  0% {
+    clip-path: circle(45% at center);
+  }
+  10% {
+    clip-path: circle(47% at center);
+  }
+  12% {
+    clip-path: circle(45% at center);
+  }
+  23% {
+    clip-path: circle(46% at center);
+  }
+  25% {
+    clip-path: circle(45% at center);
+  }
+  40% {
+    clip-path: circle(47% at center);
+  }
+  42% {
+    clip-path: circle(45% at center);
+  }
+  57% {
+    clip-path: circle(46% at center);
+  }
+  59% {
+    clip-path: circle(45% at center);
+  }
+  68% {
+    clip-path: circle(47% at center);
+  }
+  70% {
+    clip-path: circle(45% at center);
+  }
+  85% {
+    clip-path: circle(46% at center);
+  }
+  87% {
+    clip-path: circle(45% at center);
+  }
+  95% {
+    clip-path: circle(47% at center);
+  }
+  100% {
+    clip-path: circle(45% at center);
+  }
+}
